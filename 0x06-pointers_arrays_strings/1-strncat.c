@@ -1,14 +1,26 @@
 #include "main.h"
 
 /**
-* _isdigit - write a function that check for a digit (0 through 9).
-* @c: char to check
-* Return:  0 or 1
-**/
-int _isdigit(int c)
+ * _strncat - concatenates two strings
+ *
+ * @src: The source of strings
+ * @dest: The destination of the string
+ * @n: The length of int
+ *
+ * Return: pointer to the resulting string dest
+ */
+char *_strncat(char *dest, char *src, int n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	int i, j;
+
+	for (i = 0; dest[i] != '\0'; i++)
+	{
+		continue;
+	}
+	for (j = 0; src[j] != '\0' && j < n; j++)
+	{
+		dest[i + j] = src[j];
+	}
+	dest[i + j] = '\0';
+	return (dest);
 }
